@@ -20,6 +20,6 @@ function app() {
         var clock = document.querySelector("#clock");
         clock.textContent = time;
     }
-
+ 	
     setInterval(count, 1000)
 }
