@@ -15,11 +15,13 @@ function app() {
         var hour = date.getHours();
         var minute = date.getMinutes();
         var second = date.getSeconds();
-        var time = hour + ":" + minute + ":" + second
+        var time = hour + ":" + minute + ":" + second;
+
+        // function time()
 
         var clock = document.querySelector("#clock");
         clock.textContent = time;
     }
- 	
+
     setInterval(count, 1000)
 }

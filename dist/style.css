@@ -4,19 +4,6 @@ body {
 	        transition: all 2s ease;
 }
 
-<<<<<<< HEAD
-
-#clock{
-	color: white;
-	margin: 0 auto;
-
-}
-#clock::after {
-	content: "";
-	display: block;
-	padding-top: 100%;
-}
-=======
 #clock{
 	color: white;
 	margin: 0 auto;
@@ -29,7 +16,6 @@ body {
 	display: block;
 	padding-top: 100%;
 }*/
->>>>>>> master
 
 .centerify {
 	position: absolute;
