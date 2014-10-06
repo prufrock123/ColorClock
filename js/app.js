@@ -9,8 +9,18 @@ function app() {
     //     backGround.style["background-color"] = "red"
     // }, 2000);
 
-	
-	var 
 
-    setInterval(count, 1000) {}
+    function count() {
+
+        var date = new Date();
+        var hour = date.getHours();
+        var minute = date.getMinutes();
+        var second = date.getSeconds();
+        var time = hour + ":" + minute + ":" + second
+
+        var clock = document.querySelector("#clock");
+        clock.textContent = time;
+    }
+
+    setInterval(count, 1000)
 }
