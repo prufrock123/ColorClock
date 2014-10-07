@@ -3,7 +3,7 @@ window.onload = app;
 function app() {
     "use strict";
 
-    // var backGround = document.querySelector("body")
+    var backGround = document.querySelector("body")
 
     // setInterval(function() {
     //     backGround.style["background-color"] = "red"
@@ -27,8 +27,36 @@ function app() {
             }
         })
 
+/**
+ * [convertTimeToRGB description]
+ * Here we will take the time array, [hour, minute, second]
+ * and convert it to RGB.
+ * @param  {[type]} range [description]
+ * @return {[type]}       [description]
+ *
+ * Rubber duck description:
+ * We want to, for example, take the hour value, date.getHours(),
+ * and find what percent of its full value it is. E.g. if
+ * the time is 12 o'clock, it is 50% of its full 24 hour value.
+ * Once we know this percent, we will multiply it by 255 to get
+ * 50% of the RGB value.
+ */
+        function convertTimeToRGB(time) {
+        	var range = [24, 60, 60]
+        	var empty = []
+        	time.forEach(function(value, index){
+        		empty[index] = Math.round(value/range[index]* 255)
+        	})
+        	// console.log(empty.join(", "))
+        	// empty.join()
+        	return empty
+        }
+
+        // convertTimeToRGB(time);
+
         var clock = document.querySelector("#clock");
         clock.textContent = time.join(":");
+        backGround.style["background-color"]= "rgb(" + convertTimeToRGB(time).join(", ") + ")";
     }
 
     setInterval(count, 1000)
