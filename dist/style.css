@@ -7,7 +7,14 @@ body {
     color: white;
     margin: 0 auto;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 5em;
+    font-size: 6em;
+}
+#progress {
+	background-color: white;
+	height: 5px;
+	width: 100%;
+	display: block;
+	/*margin: auto;*/
 }
 /*#clock::after {
 	content: "";
